@@ -3,7 +3,7 @@ FROM alpine
 
 RUN adduser --disabled-password --home /home/container container
 USER container 
-RUN apk add --no-cache curl ca-certificates openssl git tar yarn bash sqlite fontconfig
+RUN sudo apk add --no-cache curl ca-certificates openssl git tar yarn bash sqlite fontconfig
 ENV  USER=container HOME=/home/container
 WORKDIR /home/container
 ENV HOST=0.0.0.0
