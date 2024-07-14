@@ -120,8 +120,6 @@ RUN wget https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fas
 
 # Install Astro!
 RUN yarn create astro
-RUN npm install
-RUN npm install -g astro
 RUN yarn info astro
 
 
