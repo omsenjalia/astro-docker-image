@@ -2,9 +2,9 @@ FROM node:lts-alpine AS build
 FROM alpine
 
 RUN adduser --disabled-password --home /home/container container
-USER container 
-RUN sudo apk add --no-cache curl ca-certificates openssl git tar yarn bash sqlite fontconfig
+RUN apk add --no-cache curl ca-certificates openssl git tar yarn bash sqlite fontconfig
 ENV  USER=container HOME=/home/container
+USER container
 WORKDIR /home/container
 ENV HOST=0.0.0.0
 ENV PORT=SERVER_PORT
